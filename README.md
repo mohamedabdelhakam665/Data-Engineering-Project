@@ -1,13 +1,13 @@
-###### 1. Stop the other PostgreSQL container to avoid port conflict
+#### 1. Stop the other PostgreSQL container to avoid port conflict
 docker stop pg_test
 
-###### 2. Start PostgreSQL and pgAdmin using Docker Compose
+#### 2. Start PostgreSQL and pgAdmin using Docker Compose
 docker compose up -d
 
-###### 3. Check running containers
+#### 3. Check running containers
 docker compose ps
 
-###### 4. Connect PostgreSQL container to the project network
+#### 4. Connect PostgreSQL container to the project network
 
 docker inspect dataengineeringproject-pgdatabase-1 \
   --format '{{json .NetworkSettings.Networks}}' \
@@ -16,16 +16,16 @@ docker inspect dataengineeringproject-pgdatabase-1 \
   dataengineeringproject_default \
   dataengineeringproject-pgdatabase-1
 
-###### 5. Test PostgreSQL hostname resolution
+#### 5. Test PostgreSQL hostname resolution
 docker run --rm \
   --network=dataengineeringproject_default \
   postgres:18 \
   getent hosts pgdatabase
 
-###### 6. Build the ingestion Docker image
+#### 6. Build the ingestion Docker image
 docker build -t chicago_crimes_ingest:v001 .
 
-###### 7. Run the ingestion container
+#### 7. Run the ingestion container
 docker run -it --rm \
   --network=dataengineeringproject_default \
   chicago_crimes_ingest:v001 \
