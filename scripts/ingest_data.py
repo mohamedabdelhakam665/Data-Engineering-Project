@@ -3,6 +3,8 @@ import pandas as pd
 from pathlib import Path
 from sqlalchemy import create_engine
 import argparse
+from datetime import datetime
+from ingestion_log import log_ingestion
 
 
 def extract_data():
@@ -53,10 +55,22 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    df = extract_data()
+    started_at = datetime.now()
+    source = "data/chicago_crimes.csv"
+    total_records = 0
 
-    load_data(
-        df,
-        pg_host=args.pg_host,
-        target_table=args.target_table
-    )
+    try:
+        df = extract_data()
+        total_records = len(df)
+
+        load_data(
+            df,
+            pg_host=args.pg_host,
+            target_table=args.target_table
+        )
+
+        log_ingestion(source, "SUCCESS", total_records, started_at, args.pg_host)
+
+    except Exception as e:
+        log_ingestion(source, "FAILED", total_records, started_at, args.pg_host, str(e))
+        raise

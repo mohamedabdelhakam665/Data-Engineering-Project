@@ -1,0 +1,52 @@
+2026-11-22 16:04:25,899 | INFO | clean | Cleaning stats (before/after): {'raw_rows': 230425, 'dropped_missing_key': 0, 'dropped_future_dates': 0, 'dropped_duplicates': 1, 'ward_set_null': 398, 'clean_rows': 230424}
+2026-11-22 16:04:59,876 | INFO | pipeline | Loaded 230424 rows into clean schema
+2026-11-22 16:05:00,537 | INFO | pipeline | PASS | pk_duplicates
+2026-11-22 16:05:00,538 | INFO | pipeline | PASS | fk_orphan_iucr
+2026-11-22 16:05:00,540 | INFO | pipeline | PASS | fk_orphan_location
+2026-11-22 16:05:00,542 | INFO | pipeline | PASS | null_crime_date
+2026-11-22 16:05:00,543 | INFO | pipeline | PASS | null_latitude_over_5pct
+2026-11-22 16:05:00,550 | INFO | pipeline | PASS | ward_out_of_range
+2026-11-22 16:05:00,552 | INFO | pipeline | PASS | lat_lon_out_of_range
+2026-11-22 16:05:00,849 | INFO | pipeline | PASS | future_dates
+2026-11-22 16:05:00,850 | INFO | pipeline | PASS | clean_table_empty
+2026-11-22 16:05:00,850 | INFO | pipeline | PASS | clean_more_than_raw
+2026-11-22 16:05:00,851 | INFO | pipeline | PASS | clean_lost_over_20pct
+2026-11-22 16:05:00,851 | INFO | pipeline | All data quality checks passed
+2026-11-22 16:05:00,852 | INFO | pipeline | PIPELINE SUCCESS | raw=230425 clean=230424
+2026-11-22 16:05:30,280 | INFO | pipeline | PASS | pk_duplicates
+2026-11-22 16:05:30,404 | INFO | pipeline | PASS | fk_orphan_iucr
+2026-11-22 16:05:30,405 | INFO | pipeline | PASS | fk_orphan_location
+2026-11-22 16:05:30,406 | INFO | pipeline | PASS | null_crime_date
+2026-11-22 16:05:30,407 | INFO | pipeline | PASS | null_latitude_over_5pct
+2026-11-22 16:05:30,408 | ERROR | pipeline | FAIL | ward_out_of_range | bad_count=1
+2026-11-22 16:05:30,409 | ERROR | pipeline | FAIL | lat_lon_out_of_range | bad_count=1
+2026-11-22 16:05:30,410 | ERROR | pipeline | FAIL | future_dates | bad_count=1
+2026-11-22 16:05:30,410 | INFO | pipeline | PASS | clean_table_empty
+2026-11-22 16:05:30,411 | INFO | pipeline | PASS | clean_more_than_raw
+2026-11-22 16:05:30,412 | INFO | pipeline | PASS | clean_lost_over_20pct
+2026-11-22 16:24:42,918 | INFO | clean | Cleaning stats (before/after): {'raw_rows': 230425, 'dropped_missing_key': 0, 'dropped_future_dates': 0, 'dropped_duplicates': 1, 'ward_set_null': 398, 'clean_rows': 230424}
+2026-11-22 16:25:44,090 | INFO | pipeline | Loaded 230424 rows into clean schema
+2026-11-22 16:25:45,266 | INFO | pipeline | PASS | pk_duplicates
+2026-11-22 16:25:45,270 | INFO | pipeline | PASS | fk_orphan_iucr
+2026-11-22 16:25:45,271 | INFO | pipeline | PASS | fk_orphan_location
+2026-11-22 16:25:45,272 | INFO | pipeline | PASS | null_crime_date
+2026-11-22 16:25:45,274 | INFO | pipeline | PASS | null_latitude_over_5pct
+2026-11-22 16:25:45,275 | INFO | pipeline | PASS | ward_out_of_range
+2026-11-22 16:25:45,277 | INFO | pipeline | PASS | lat_lon_out_of_range
+2026-11-22 16:25:45,281 | INFO | pipeline | PASS | future_dates
+2026-11-22 16:25:45,282 | INFO | pipeline | PASS | clean_table_empty
+2026-11-22 16:25:45,283 | INFO | pipeline | PASS | clean_more_than_raw
+2026-11-22 16:25:45,284 | INFO | pipeline | PASS | clean_lost_over_20pct
+2026-11-22 16:25:45,285 | INFO | pipeline | All data quality checks passed
+2026-11-22 16:25:45,286 | INFO | pipeline | PIPELINE SUCCESS | raw=230425 clean=230424
+2026-11-22 16:45:39,285 | INFO | pipeline | PASS | pk_duplicates
+2026-11-22 16:45:39,381 | INFO | pipeline | PASS | fk_orphan_iucr
+2026-11-22 16:45:39,384 | INFO | pipeline | PASS | fk_orphan_location
+2026-11-22 16:45:39,387 | INFO | pipeline | PASS | null_crime_date
+2026-11-22 16:45:39,389 | INFO | pipeline | PASS | null_latitude_over_5pct
+2026-11-22 16:45:39,391 | ERROR | pipeline | FAIL | ward_out_of_range | bad_count=1
+2026-11-22 16:45:39,392 | ERROR | pipeline | FAIL | lat_lon_out_of_range | bad_count=1
+2026-11-22 16:45:39,393 | ERROR | pipeline | FAIL | future_dates | bad_count=1
+2026-11-22 16:45:39,394 | INFO | pipeline | PASS | clean_table_empty
+2026-11-22 16:45:39,397 | INFO | pipeline | PASS | clean_more_than_raw
+2026-11-22 16:45:39,398 | INFO | pipeline | PASS | clean_lost_over_20pct

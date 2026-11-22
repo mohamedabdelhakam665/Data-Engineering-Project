@@ -1,0 +1,1 @@
+source=data/chicago_crimes.csv | status=SUCCESS | records_fetched=230425 | started=2026-11-22 16:01:40 | finished=2026-11-22 16:02:46 | error=None
